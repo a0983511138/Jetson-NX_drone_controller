@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/I2C.h
+inttypes.h
+-
+
+../lib/PCA9685.h
+inttypes.h
+-
+I2C.h
+../lib/I2C.h
+
+/home/uav/code/controller/util/util1/main.cpp
+iostream
+-
+pthread.h
+-
+PCA9685.h
+/home/uav/code/controller/util/util1/PCA9685.h
+unistd.h
+-
+stdlib.h
+-
+

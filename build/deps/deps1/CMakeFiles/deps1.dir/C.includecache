@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../deps/deps1/deps1.h
+stdint.h
+-
+
+/home/uav/code/controller/deps/deps1/deps1.c
+deps1.h
+-
+string.h
+-
+stdio.h
+-
+
