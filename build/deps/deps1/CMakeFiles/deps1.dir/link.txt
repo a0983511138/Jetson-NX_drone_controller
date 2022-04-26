@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdeps1.a  CMakeFiles/deps1.dir/deps1.c.o
-/usr/bin/ranlib libdeps1.a
