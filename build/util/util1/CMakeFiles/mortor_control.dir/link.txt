@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/mortor_control.dir/main.cpp.o  -o mortor_control ../../deps/deps1/libdeps1.a -lJetsonGPIO -lpthread ../../lib/libi2c.a 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <pthread.h>
 #include "PCA9685.h"
 #include <unistd.h>
@@ -20,33 +21,34 @@ void* keyPress(void* arg);
 void* moving(void* arg);
 
 PCA9685 motor = PCA9685(bus, address);   //PCA9685 create
+char *ptr = (char*)malloc(sizeof(char) * 5);
 
 int main(){
     char *state = (char*)"1700";
-    char *ptr;
+    //char *ptr = (char*)malloc(sizeof(char) * 5);
 
     motor.setPWMFreq(frequency);        //set frequency
     sleep(1);
 
     pthread_t t1, t2;  //create pthread
     sleep(1);
+    
+    pthread_create(&t1, NULL, keyPress, NULL);
+    pthread_detach(t1);
 
     while(1){
-        pthread_create(&t1, NULL, keyPress, NULL);
         pthread_create(&t2, NULL, moving, state);
-        pthread_join(t1, (void **)&ptr);
-
         state = ptr;
-        if(((char*)ptr)[0] == 's'){
+
+        if(ptr[0] == 's'){
             state == (char*)"1700";
             break;
         }
-        
     }
     
     pthread_cancel(t2);
 
-    stop();
+    //stop();
 
     return 0;
 }
@@ -86,13 +88,13 @@ void stop(){
 }
 
 void* keyPress(void* arg){
-    char *buf = (char*)malloc(sizeof(char) * 5);
 
-    sleep(1);
-    cout << "set pwm(" << min_pulse << " ~ " << max_pulse << ") : ";
-    cin >> buf;
-
-    pthread_exit(buf);
+    while(ptr[0] != 's'){
+        cout << "input the motor value('s' to stop):" << endl;
+        cin >> ptr;
+        //cout << "\nt1: " << (string)ptr << endl;
+    }
+    cout << "-----------stop!-----------" << endl;
 }
 
 void* moving(void* arg){         //set motor PWM smoothly
@@ -100,7 +102,7 @@ void* moving(void* arg){         //set motor PWM smoothly
     int target = atoi((char*)arg);
 
     pwm = motor.getPWM(1);
-    cout << "t2: pwm:" << pwm << "\ttarget:" << target << endl;
+    //cout << "t2: pwm:" << pwm << "\ttarget:" << target << endl;
 
     while(pwm != target){
         if(abs(pwm - target) < motor_acc)
@@ -115,7 +117,7 @@ void* moving(void* arg){         //set motor PWM smoothly
         motor.setPWM(2, pwm);
         motor.setPWM(3, pwm);
         motor.setPWM(4, pwm);
-        cout << "t2_in: pwm:" << pwm << "\ttarget:" << target << endl;
+        //cout << "t2_in: pwm:" << pwm << "\ttarget:" << target << endl;
         sleep(0.8);
     }
 }
