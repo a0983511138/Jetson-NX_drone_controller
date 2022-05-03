@@ -21,10 +21,10 @@ void* keyPress(void* arg);
 void* moving(void* arg);
 
 PCA9685 motor = PCA9685(bus, address);   //PCA9685 create
-char *ptr = (char*)malloc(sizeof(char) * 5);
+int ptr;
 
 int main(){
-    char *state = (char*)"1700";
+    //char *state = (char*)"1700";
     //char *ptr = (char*)malloc(sizeof(char) * 5);
 
     motor.setPWMFreq(frequency);        //set frequency
@@ -37,16 +37,16 @@ int main(){
     pthread_detach(t1);
 
     while(1){
-        pthread_create(&t2, NULL, moving, state);
-        state = ptr;
+        pthread_create(&t2, NULL, moving, NULL);
 
-        if(ptr[0] == 's'){
-            state == (char*)"1700";
+        if(ptr == -1){
+            cout << "---------------stop------------------" << endl;
+            ptr = min_pulse;
             break;
         }
     }
     
-    pthread_cancel(t2);
+    //pthread_cancel(t2);
 
     //stop();
 
@@ -89,15 +89,31 @@ void stop(){
 
 void* keyPress(void* arg){
 
-    while(ptr[0] != 's'){
-        cout << "input the motor value('s' to stop):" << endl;
+    while(ptr >= 0){
+        cout << "======================================================" << endl;
+        cout << "input the motor value "<< min_pulse << " ~ " << max_pulse << "('-1' to stop): ";
         cin >> ptr;
-        //cout << "\nt1: " << (string)ptr << endl;
+        cout << "t1: " << ptr << endl;
     }
-    cout << "-----------stop!-----------" << endl;
 }
 
-void* moving(void* arg){         //set motor PWM smoothly
+void* moving(void* arg){
+    int pwm = motor.getPWM(1);
+
+    if(abs(pwm - ptr) < motor_acc)
+        pwm = ptr;
+    if(pwm > ptr)
+        pwm -= motor_acc;
+    else if(pwm < ptr){
+        pwm += motor_acc;
+    }
+    motor.setPWM(1, pwm);
+    motor.setPWM(2, pwm);
+    motor.setPWM(3, pwm);
+    motor.setPWM(4, pwm);
+}
+
+/*void* moving(void* arg){         //set motor PWM smoothly
     int pwm, i;
     int target = atoi((char*)arg);
 
@@ -121,4 +137,4 @@ void* moving(void* arg){         //set motor PWM smoothly
         sleep(0.8);
     }
 }
-
+*/
