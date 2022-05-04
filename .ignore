@@ -1,6 +1,5 @@
 # Prerequisites
 *.d
-*.py
 
 # Compiled Object files
 *.slo
