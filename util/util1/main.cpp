@@ -21,12 +21,9 @@ void* keyPress(void* arg);
 void* moving(void* arg);
 
 PCA9685 motor = PCA9685(bus, address);   //PCA9685 create
-int ptr;
+int ptr = min_pulse;
 
 int main(){
-    //char *state = (char*)"1700";
-    //char *ptr = (char*)malloc(sizeof(char) * 5);
-
     motor.setPWMFreq(frequency);        //set frequency
     sleep(1);
 
@@ -45,9 +42,6 @@ int main(){
             break;
         }
     }
-    
-    //pthread_cancel(t2);
-
     //stop();
 
     return 0;
@@ -112,29 +106,3 @@ void* moving(void* arg){
     motor.setPWM(3, pwm);
     motor.setPWM(4, pwm);
 }
-
-/*void* moving(void* arg){         //set motor PWM smoothly
-    int pwm, i;
-    int target = atoi((char*)arg);
-
-    pwm = motor.getPWM(1);
-    //cout << "t2: pwm:" << pwm << "\ttarget:" << target << endl;
-
-    while(pwm != target){
-        if(abs(pwm - target) < motor_acc)
-            pwm = target;
-        if(pwm > target){
-            pwm -= motor_acc;
-        }
-        else if(pwm < target){
-            pwm += motor_acc;
-        }
-        motor.setPWM(1, pwm);
-        motor.setPWM(2, pwm);
-        motor.setPWM(3, pwm);
-        motor.setPWM(4, pwm);
-        //cout << "t2_in: pwm:" << pwm << "\ttarget:" << target << endl;
-        sleep(0.8);
-    }
-}
-*/
