@@ -24,16 +24,17 @@ PCA9685 motor = PCA9685(bus, address);   //PCA9685 create
 int ptr = min_pulse;
 
 int main(){
+    int motor_no, pulse;
     motor.setPWMFreq(frequency);        //set frequency
     sleep(1);
 
     pthread_t t1, t2;  //create pthread
     sleep(1);
-    
+/*    
     pthread_create(&t1, NULL, keyPress, NULL);
-    pthread_detach(t1);
+    //pthread_detach(t1);
 
-    while(1){
+    while(ptr != -1){
         pthread_create(&t2, NULL, moving, NULL);
 
         if(ptr == -1){
@@ -42,6 +43,23 @@ int main(){
             break;
         }
     }
+*/
+    while(pulse >= 0 && motor_no >= 0){
+        cout << "======================================================" << endl;
+        cout << "input the motor and its value "<< min_pulse << " ~ " << max_pulse << "('-1' to stop): ";
+        cin >> motor_no >> pulse;
+        motor.setPWM(motor_no, pulse);
+        if(pulse < 0 || motor_no < 0)
+            break;
+    
+    }
+
+    cout << "======================while out===================" << endl;
+    motor.setPWM(1, min_pulse);
+    motor.setPWM(2, min_pulse);
+    //motor.setPWM(3, 1700);
+    //motor.setPWM(4, 1700);
+
     //stop();
 
     return 0;
@@ -56,6 +74,30 @@ int findMax(int* buf, int size){
     cout << "max : " << max << endl;
 
     return max;
+}
+
+void* keyPress(void* arg){
+
+    while(ptr >= 0){
+        cout << "======================================================" << endl;
+        cout << "input the motor value "<< min_pulse << " ~ " << max_pulse << "('-1' to stop): ";
+        cin >> ptr;
+        cout << "t1: " << ptr << endl;
+        if(ptr == -1)
+            break;
+    }
+    return NULL;
+}
+
+void* moving(void* arg){
+
+    motor.setPWM(1, ptr);
+    cout << "\nptr= " << ptr << ", pwm= " << motor.getPWM(1) << endl;;
+    sleep(1);
+    //motor.setPWM(2, pwm);
+    //motor.setPWM(3, pwm);
+    //motor.setPWM(4, pwm);
+    return NULL;
 }
 
 void stop(){
@@ -79,30 +121,4 @@ void stop(){
             sleep(0.3);
         }
     }
-}
-
-void* keyPress(void* arg){
-
-    while(ptr >= 0){
-        cout << "======================================================" << endl;
-        cout << "input the motor value "<< min_pulse << " ~ " << max_pulse << "('-1' to stop): ";
-        cin >> ptr;
-        cout << "t1: " << ptr << endl;
-    }
-}
-
-void* moving(void* arg){
-    int pwm = motor.getPWM(1);
-
-    if(abs(pwm - ptr) < motor_acc)
-        pwm = ptr;
-    if(pwm > ptr)
-        pwm -= motor_acc;
-    else if(pwm < ptr){
-        pwm += motor_acc;
-    }
-    motor.setPWM(1, pwm);
-    motor.setPWM(2, pwm);
-    motor.setPWM(3, pwm);
-    motor.setPWM(4, pwm);
 }
