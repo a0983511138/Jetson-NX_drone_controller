@@ -1,4 +1,4 @@
-# Install script for directory: /home/uav/code/controller/deps/deps1
+# Install script for directory: /home/uav/code/controller/deps/gyro
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,25 +39,25 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/uav/code/controller/build/install/lib/libdeps1.a")
+   "/home/uav/code/controller/build/install/lib/liblibgyro.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/uav/code/controller/build/install/lib" TYPE STATIC_LIBRARY FILES "/home/uav/code/controller/build/deps/deps1/libdeps1.a")
+file(INSTALL DESTINATION "/home/uav/code/controller/build/install/lib" TYPE STATIC_LIBRARY FILES "/home/uav/code/controller/build/deps/gyro/liblibgyro.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/uav/code/controller/build/install/include/deps1.h")
+   "/home/uav/code/controller/build/install/include/*.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/uav/code/controller/build/install/include" TYPE FILE FILES "/home/uav/code/controller/deps/deps1/deps1.h")
+file(INSTALL DESTINATION "/home/uav/code/controller/build/install/include" TYPE FILE FILES "/home/uav/code/controller/deps/gyro/*.h")
 endif()
 

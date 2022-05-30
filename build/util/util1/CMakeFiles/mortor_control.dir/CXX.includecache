@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+../deps/gyro/imu_data_decode.h
+stdint.h
+-
+stdbool.h
+-
+
+../deps/gyro/mygyro.h
+
+../deps/gyro/packet.h
+stdint.h
+-
+stdbool.h
+-
+
 ../lib/I2C.h
 inttypes.h
 -
@@ -23,10 +37,16 @@ string
 -
 pthread.h
 -
-PCA9685.h
-/home/uav/code/controller/util/util1/PCA9685.h
 unistd.h
 -
 stdlib.h
 -
+PCA9685.h
+/home/uav/code/controller/util/util1/PCA9685.h
+mygyro.h
+/home/uav/code/controller/util/util1/mygyro.h
+packet.h
+/home/uav/code/controller/util/util1/packet.h
+imu_data_decode.h
+/home/uav/code/controller/util/util1/imu_data_decode.h
 

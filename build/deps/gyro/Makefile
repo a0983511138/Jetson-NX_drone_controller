@@ -79,6 +79,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -101,17 +112,6 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/uav/code/controller/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles /home/uav/code/controller/build/deps/deps1/CMakeFiles/progress.marks
-	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 deps/deps1/all
+	cd /home/uav/code/controller/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles /home/uav/code/controller/build/deps/gyro/CMakeFiles/progress.marks
+	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 deps/gyro/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 deps/deps1/clean
+	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 deps/gyro/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,12 +143,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 deps/deps1/preinstall
+	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 deps/gyro/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 deps/deps1/preinstall
+	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 deps/gyro/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -157,46 +157,100 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-deps/deps1/CMakeFiles/deps1.dir/rule:
-	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 deps/deps1/CMakeFiles/deps1.dir/rule
-.PHONY : deps/deps1/CMakeFiles/deps1.dir/rule
+deps/gyro/CMakeFiles/libgyro.dir/rule:
+	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 deps/gyro/CMakeFiles/libgyro.dir/rule
+.PHONY : deps/gyro/CMakeFiles/libgyro.dir/rule
 
 # Convenience name for target.
-deps1: deps/deps1/CMakeFiles/deps1.dir/rule
+libgyro: deps/gyro/CMakeFiles/libgyro.dir/rule
 
-.PHONY : deps1
+.PHONY : libgyro
 
 # fast build rule for target.
-deps1/fast:
-	cd /home/uav/code/controller/build && $(MAKE) -f deps/deps1/CMakeFiles/deps1.dir/build.make deps/deps1/CMakeFiles/deps1.dir/build
-.PHONY : deps1/fast
+libgyro/fast:
+	cd /home/uav/code/controller/build && $(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/build
+.PHONY : libgyro/fast
 
-deps1.o: deps1.c.o
+imu_data_decode.o: imu_data_decode.cpp.o
 
-.PHONY : deps1.o
+.PHONY : imu_data_decode.o
 
 # target to build an object file
-deps1.c.o:
-	cd /home/uav/code/controller/build && $(MAKE) -f deps/deps1/CMakeFiles/deps1.dir/build.make deps/deps1/CMakeFiles/deps1.dir/deps1.c.o
-.PHONY : deps1.c.o
+imu_data_decode.cpp.o:
+	cd /home/uav/code/controller/build && $(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/imu_data_decode.cpp.o
+.PHONY : imu_data_decode.cpp.o
 
-deps1.i: deps1.c.i
+imu_data_decode.i: imu_data_decode.cpp.i
 
-.PHONY : deps1.i
+.PHONY : imu_data_decode.i
 
 # target to preprocess a source file
-deps1.c.i:
-	cd /home/uav/code/controller/build && $(MAKE) -f deps/deps1/CMakeFiles/deps1.dir/build.make deps/deps1/CMakeFiles/deps1.dir/deps1.c.i
-.PHONY : deps1.c.i
+imu_data_decode.cpp.i:
+	cd /home/uav/code/controller/build && $(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/imu_data_decode.cpp.i
+.PHONY : imu_data_decode.cpp.i
 
-deps1.s: deps1.c.s
+imu_data_decode.s: imu_data_decode.cpp.s
 
-.PHONY : deps1.s
+.PHONY : imu_data_decode.s
 
 # target to generate assembly for a file
-deps1.c.s:
-	cd /home/uav/code/controller/build && $(MAKE) -f deps/deps1/CMakeFiles/deps1.dir/build.make deps/deps1/CMakeFiles/deps1.dir/deps1.c.s
-.PHONY : deps1.c.s
+imu_data_decode.cpp.s:
+	cd /home/uav/code/controller/build && $(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/imu_data_decode.cpp.s
+.PHONY : imu_data_decode.cpp.s
+
+mygyro.o: mygyro.cpp.o
+
+.PHONY : mygyro.o
+
+# target to build an object file
+mygyro.cpp.o:
+	cd /home/uav/code/controller/build && $(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/mygyro.cpp.o
+.PHONY : mygyro.cpp.o
+
+mygyro.i: mygyro.cpp.i
+
+.PHONY : mygyro.i
+
+# target to preprocess a source file
+mygyro.cpp.i:
+	cd /home/uav/code/controller/build && $(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/mygyro.cpp.i
+.PHONY : mygyro.cpp.i
+
+mygyro.s: mygyro.cpp.s
+
+.PHONY : mygyro.s
+
+# target to generate assembly for a file
+mygyro.cpp.s:
+	cd /home/uav/code/controller/build && $(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/mygyro.cpp.s
+.PHONY : mygyro.cpp.s
+
+packet.o: packet.cpp.o
+
+.PHONY : packet.o
+
+# target to build an object file
+packet.cpp.o:
+	cd /home/uav/code/controller/build && $(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/packet.cpp.o
+.PHONY : packet.cpp.o
+
+packet.i: packet.cpp.i
+
+.PHONY : packet.i
+
+# target to preprocess a source file
+packet.cpp.i:
+	cd /home/uav/code/controller/build && $(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/packet.cpp.i
+.PHONY : packet.cpp.i
+
+packet.s: packet.cpp.s
+
+.PHONY : packet.s
+
+# target to generate assembly for a file
+packet.cpp.s:
+	cd /home/uav/code/controller/build && $(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/packet.cpp.s
+.PHONY : packet.cpp.s
 
 # Help Target
 help:
@@ -206,14 +260,20 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... edit_cache"
-	@echo "... deps1"
+	@echo "... libgyro"
+	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... install/local"
-	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... deps1.o"
-	@echo "... deps1.i"
-	@echo "... deps1.s"
+	@echo "... imu_data_decode.o"
+	@echo "... imu_data_decode.i"
+	@echo "... imu_data_decode.s"
+	@echo "... mygyro.o"
+	@echo "... mygyro.i"
+	@echo "... mygyro.s"
+	@echo "... packet.o"
+	@echo "... packet.i"
+	@echo "... packet.s"
 .PHONY : help
 
 

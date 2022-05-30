@@ -203,15 +203,6 @@ JETSONGPIO_INCLUDE_DIRS:PATH=/usr/local/include/JetsonGPIO
 JETSONGPIO_LIBRARIES:FILEPATH=/usr/local/lib/libJetsonGPIO.so
 
 //Value Computed by CMake
-deps1_BINARY_DIR:STATIC=/home/uav/code/controller/build/deps/deps1
-
-//Dependencies for target
-deps1_LIB_DEPENDS:STATIC=
-
-//Value Computed by CMake
-deps1_SOURCE_DIR:STATIC=/home/uav/code/controller/deps/deps1
-
-//Value Computed by CMake
 i2c_BINARY_DIR:STATIC=/home/uav/code/controller/build/lib
 
 //Dependencies for target
@@ -219,6 +210,15 @@ i2c_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
 i2c_SOURCE_DIR:STATIC=/home/uav/code/controller/lib
+
+//Value Computed by CMake
+libgyro_BINARY_DIR:STATIC=/home/uav/code/controller/build/deps/gyro
+
+//Dependencies for target
+libgyro_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+libgyro_SOURCE_DIR:STATIC=/home/uav/code/controller/deps/gyro
 
 //Value Computed by CMake
 mortor_control_BINARY_DIR:STATIC=/home/uav/code/controller/build/util/util1

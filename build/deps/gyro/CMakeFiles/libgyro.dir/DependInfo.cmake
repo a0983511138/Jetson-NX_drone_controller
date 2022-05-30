@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/uav/code/controller/util/util1/main.cpp" "/home/uav/code/controller/build/util/util1/CMakeFiles/mortor_control.dir/main.cpp.o"
+  "/home/uav/code/controller/deps/gyro/imu_data_decode.cpp" "/home/uav/code/controller/build/deps/gyro/CMakeFiles/libgyro.dir/imu_data_decode.cpp.o"
+  "/home/uav/code/controller/deps/gyro/mygyro.cpp" "/home/uav/code/controller/build/deps/gyro/CMakeFiles/libgyro.dir/mygyro.cpp.o"
+  "/home/uav/code/controller/deps/gyro/packet.cpp" "/home/uav/code/controller/build/deps/gyro/CMakeFiles/libgyro.dir/packet.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -12,14 +14,10 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../deps/gyro"
   "/usr/local/include/JetsonGPIO"
-  "../lib"
-  "../util/util1"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/uav/code/controller/build/deps/gyro/CMakeFiles/libgyro.dir/DependInfo.cmake"
-  "/home/uav/code/controller/build/lib/CMakeFiles/i2c.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

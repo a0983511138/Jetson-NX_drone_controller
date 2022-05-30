@@ -90,7 +90,7 @@ mortor_control_EXTERNAL_OBJECTS =
 
 util/util1/mortor_control: util/util1/CMakeFiles/mortor_control.dir/main.cpp.o
 util/util1/mortor_control: util/util1/CMakeFiles/mortor_control.dir/build.make
-util/util1/mortor_control: deps/deps1/libdeps1.a
+util/util1/mortor_control: deps/gyro/liblibgyro.a
 util/util1/mortor_control: lib/libi2c.a
 util/util1/mortor_control: util/util1/CMakeFiles/mortor_control.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mortor_control"

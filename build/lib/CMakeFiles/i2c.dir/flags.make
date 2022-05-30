@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -O3   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/uav/code/controller/deps/deps1 -I/usr/local/include/JetsonGPIO -I/home/uav/code/controller/lib 
+CXX_INCLUDES = -I/home/uav/code/controller/deps/gyro -I/usr/local/include/JetsonGPIO -I/home/uav/code/controller/lib 
 

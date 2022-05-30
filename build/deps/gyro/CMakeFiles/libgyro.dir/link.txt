@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibgyro.a  CMakeFiles/libgyro.dir/imu_data_decode.cpp.o CMakeFiles/libgyro.dir/mygyro.cpp.o CMakeFiles/libgyro.dir/packet.cpp.o
+/usr/bin/ranlib liblibgyro.a

@@ -157,17 +157,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named deps1
+# Target rules for targets named libgyro
 
 # Build rule for target.
-deps1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 deps1
-.PHONY : deps1
+libgyro: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libgyro
+.PHONY : libgyro
 
 # fast build rule for target.
-deps1/fast:
-	$(MAKE) -f deps/deps1/CMakeFiles/deps1.dir/build.make deps/deps1/CMakeFiles/deps1.dir/build
-.PHONY : deps1/fast
+libgyro/fast:
+	$(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/build
+.PHONY : libgyro/fast
 
 #=============================================================================
 # Target rules for targets named i2c
@@ -207,7 +207,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... deps1"
+	@echo "... libgyro"
 	@echo "... i2c"
 	@echo "... mortor_control"
 .PHONY : help

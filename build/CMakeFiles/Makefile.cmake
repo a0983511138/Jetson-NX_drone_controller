@@ -15,7 +15,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../cmake/deps.cmake"
   "../cmake/lib.cmake"
   "../cmake/util.cmake"
-  "../deps/deps1/CMakeLists.txt"
+  "../deps/gyro/CMakeLists.txt"
   "../lib/CMakeLists.txt"
   "../util/util1/CMakeLists.txt"
   "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
@@ -47,14 +47,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "deps/deps1/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "deps/gyro/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "util/util1/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "deps/deps1/CMakeFiles/deps1.dir/DependInfo.cmake"
+  "deps/gyro/CMakeFiles/libgyro.dir/DependInfo.cmake"
   "lib/CMakeFiles/i2c.dir/DependInfo.cmake"
   "util/util1/CMakeFiles/mortor_control.dir/DependInfo.cmake"
   )

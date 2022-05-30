@@ -1,22 +1,32 @@
 [
 {
-  "directory": "/home/uav/code/controller/build/deps/deps1",
-  "command": "/usr/bin/cc  -I/home/uav/code/controller/deps/deps1 -I/usr/local/include/JetsonGPIO   -Wall -O3   -o CMakeFiles/deps1.dir/deps1.c.o   -c /home/uav/code/controller/deps/deps1/deps1.c",
-  "file": "/home/uav/code/controller/deps/deps1/deps1.c"
+  "directory": "/home/uav/code/controller/build/deps/gyro",
+  "command": "/usr/bin/c++   -I/home/uav/code/controller/deps/gyro -I/usr/local/include/JetsonGPIO  -O3 -DNDEBUG   -o CMakeFiles/libgyro.dir/imu_data_decode.cpp.o -c /home/uav/code/controller/deps/gyro/imu_data_decode.cpp",
+  "file": "/home/uav/code/controller/deps/gyro/imu_data_decode.cpp"
+},
+{
+  "directory": "/home/uav/code/controller/build/deps/gyro",
+  "command": "/usr/bin/c++   -I/home/uav/code/controller/deps/gyro -I/usr/local/include/JetsonGPIO  -O3 -DNDEBUG   -o CMakeFiles/libgyro.dir/mygyro.cpp.o -c /home/uav/code/controller/deps/gyro/mygyro.cpp",
+  "file": "/home/uav/code/controller/deps/gyro/mygyro.cpp"
+},
+{
+  "directory": "/home/uav/code/controller/build/deps/gyro",
+  "command": "/usr/bin/c++   -I/home/uav/code/controller/deps/gyro -I/usr/local/include/JetsonGPIO  -O3 -DNDEBUG   -o CMakeFiles/libgyro.dir/packet.cpp.o -c /home/uav/code/controller/deps/gyro/packet.cpp",
+  "file": "/home/uav/code/controller/deps/gyro/packet.cpp"
 },
 {
   "directory": "/home/uav/code/controller/build/lib",
-  "command": "/usr/bin/c++   -I/home/uav/code/controller/deps/deps1 -I/usr/local/include/JetsonGPIO -I/home/uav/code/controller/lib   -Wall -O3   -std=gnu++11 -o CMakeFiles/i2c.dir/I2C.cpp.o -c /home/uav/code/controller/lib/I2C.cpp",
+  "command": "/usr/bin/c++   -I/home/uav/code/controller/deps/gyro -I/usr/local/include/JetsonGPIO -I/home/uav/code/controller/lib   -Wall -O3   -std=gnu++11 -o CMakeFiles/i2c.dir/I2C.cpp.o -c /home/uav/code/controller/lib/I2C.cpp",
   "file": "/home/uav/code/controller/lib/I2C.cpp"
 },
 {
   "directory": "/home/uav/code/controller/build/lib",
-  "command": "/usr/bin/c++   -I/home/uav/code/controller/deps/deps1 -I/usr/local/include/JetsonGPIO -I/home/uav/code/controller/lib   -Wall -O3   -std=gnu++11 -o CMakeFiles/i2c.dir/PCA9685.cpp.o -c /home/uav/code/controller/lib/PCA9685.cpp",
+  "command": "/usr/bin/c++   -I/home/uav/code/controller/deps/gyro -I/usr/local/include/JetsonGPIO -I/home/uav/code/controller/lib   -Wall -O3   -std=gnu++11 -o CMakeFiles/i2c.dir/PCA9685.cpp.o -c /home/uav/code/controller/lib/PCA9685.cpp",
   "file": "/home/uav/code/controller/lib/PCA9685.cpp"
 },
 {
   "directory": "/home/uav/code/controller/build/util/util1",
-  "command": "/usr/bin/c++   -I/home/uav/code/controller/deps/deps1 -I/usr/local/include/JetsonGPIO -I/home/uav/code/controller/lib -I/home/uav/code/controller/util/util1  -O3 -DNDEBUG   -o CMakeFiles/mortor_control.dir/main.cpp.o -c /home/uav/code/controller/util/util1/main.cpp",
+  "command": "/usr/bin/c++   -I/home/uav/code/controller/deps/gyro -I/usr/local/include/JetsonGPIO -I/home/uav/code/controller/lib -I/home/uav/code/controller/util/util1  -O3 -DNDEBUG   -o CMakeFiles/mortor_control.dir/main.cpp.o -c /home/uav/code/controller/util/util1/main.cpp",
   "file": "/home/uav/code/controller/util/util1/main.cpp"
 }
 ]

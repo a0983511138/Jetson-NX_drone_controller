@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 2.8)
 
 # Set variables
-set(PROJECT_NAME deps1)
-set(PROJECT_LANGUAGE C)
-set(PROJECT_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/deps1.h)
+set(PROJECT_NAME libgyro)
+set(PROJECT_LANGUAGE CXX)
+set(PROJECT_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
 
 # Compile setting
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
@@ -21,7 +21,7 @@ endif()
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 # Set file list
-file(GLOB PROJECT_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/*.c)
+file(GLOB PROJECT_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 
 # Build library
 add_library(${PROJECT_NAME} STATIC ${PROJECT_SRCS})

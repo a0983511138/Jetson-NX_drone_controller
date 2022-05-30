@@ -60,57 +60,57 @@ CMAKE_SOURCE_DIR = /home/uav/code/controller
 CMAKE_BINARY_DIR = /home/uav/code/controller/build
 
 #=============================================================================
-# Directory level rules for directory deps/deps1
+# Directory level rules for directory deps/gyro
 
 # Convenience name for "all" pass in the directory.
-deps/deps1/all: deps/deps1/CMakeFiles/deps1.dir/all
+deps/gyro/all: deps/gyro/CMakeFiles/libgyro.dir/all
 
-.PHONY : deps/deps1/all
+.PHONY : deps/gyro/all
 
 # Convenience name for "clean" pass in the directory.
-deps/deps1/clean: deps/deps1/CMakeFiles/deps1.dir/clean
+deps/gyro/clean: deps/gyro/CMakeFiles/libgyro.dir/clean
 
-.PHONY : deps/deps1/clean
+.PHONY : deps/gyro/clean
 
 # Convenience name for "preinstall" pass in the directory.
-deps/deps1/preinstall:
+deps/gyro/preinstall:
 
-.PHONY : deps/deps1/preinstall
+.PHONY : deps/gyro/preinstall
 
 #=============================================================================
-# Target rules for target deps/deps1/CMakeFiles/deps1.dir
+# Target rules for target deps/gyro/CMakeFiles/libgyro.dir
 
 # All Build rule for target.
-deps/deps1/CMakeFiles/deps1.dir/all:
-	$(MAKE) -f deps/deps1/CMakeFiles/deps1.dir/build.make deps/deps1/CMakeFiles/deps1.dir/depend
-	$(MAKE) -f deps/deps1/CMakeFiles/deps1.dir/build.make deps/deps1/CMakeFiles/deps1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=1,2 "Built target deps1"
-.PHONY : deps/deps1/CMakeFiles/deps1.dir/all
+deps/gyro/CMakeFiles/libgyro.dir/all:
+	$(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/depend
+	$(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=4,5,6,7 "Built target libgyro"
+.PHONY : deps/gyro/CMakeFiles/libgyro.dir/all
 
 # Include target in all.
-all: deps/deps1/CMakeFiles/deps1.dir/all
+all: deps/gyro/CMakeFiles/libgyro.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-deps/deps1/CMakeFiles/deps1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 deps/deps1/CMakeFiles/deps1.dir/all
+deps/gyro/CMakeFiles/libgyro.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 deps/gyro/CMakeFiles/libgyro.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 0
-.PHONY : deps/deps1/CMakeFiles/deps1.dir/rule
+.PHONY : deps/gyro/CMakeFiles/libgyro.dir/rule
 
 # Convenience name for target.
-deps1: deps/deps1/CMakeFiles/deps1.dir/rule
+libgyro: deps/gyro/CMakeFiles/libgyro.dir/rule
 
-.PHONY : deps1
-
-# clean rule for target.
-deps/deps1/CMakeFiles/deps1.dir/clean:
-	$(MAKE) -f deps/deps1/CMakeFiles/deps1.dir/build.make deps/deps1/CMakeFiles/deps1.dir/clean
-.PHONY : deps/deps1/CMakeFiles/deps1.dir/clean
+.PHONY : libgyro
 
 # clean rule for target.
-clean: deps/deps1/CMakeFiles/deps1.dir/clean
+deps/gyro/CMakeFiles/libgyro.dir/clean:
+	$(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/clean
+.PHONY : deps/gyro/CMakeFiles/libgyro.dir/clean
+
+# clean rule for target.
+clean: deps/gyro/CMakeFiles/libgyro.dir/clean
 
 .PHONY : clean
 
@@ -139,7 +139,7 @@ lib/preinstall:
 lib/CMakeFiles/i2c.dir/all:
 	$(MAKE) -f lib/CMakeFiles/i2c.dir/build.make lib/CMakeFiles/i2c.dir/depend
 	$(MAKE) -f lib/CMakeFiles/i2c.dir/build.make lib/CMakeFiles/i2c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=3,4,5 "Built target i2c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=1,2,3 "Built target i2c"
 .PHONY : lib/CMakeFiles/i2c.dir/all
 
 # Include target in all.
@@ -192,10 +192,10 @@ util/util1/preinstall:
 
 # All Build rule for target.
 util/util1/CMakeFiles/mortor_control.dir/all: lib/CMakeFiles/i2c.dir/all
-util/util1/CMakeFiles/mortor_control.dir/all: deps/deps1/CMakeFiles/deps1.dir/all
+util/util1/CMakeFiles/mortor_control.dir/all: deps/gyro/CMakeFiles/libgyro.dir/all
 	$(MAKE) -f util/util1/CMakeFiles/mortor_control.dir/build.make util/util1/CMakeFiles/mortor_control.dir/depend
 	$(MAKE) -f util/util1/CMakeFiles/mortor_control.dir/build.make util/util1/CMakeFiles/mortor_control.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=6,7 "Built target mortor_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=8,9 "Built target mortor_control"
 .PHONY : util/util1/CMakeFiles/mortor_control.dir/all
 
 # Include target in all.
@@ -205,7 +205,7 @@ all: util/util1/CMakeFiles/mortor_control.dir/all
 
 # Build rule for subdir invocation for target.
 util/util1/CMakeFiles/mortor_control.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 util/util1/CMakeFiles/mortor_control.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 0
 .PHONY : util/util1/CMakeFiles/mortor_control.dir/rule

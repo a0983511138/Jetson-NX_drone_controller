@@ -1,9 +1,13 @@
 #include <iostream>
 #include <string>
 #include <pthread.h>
-#include "PCA9685.h"
 #include <unistd.h>
 #include <stdlib.h>
+
+#include "PCA9685.h"
+#include "mygyro.h"
+#include "packet.h"
+#include "imu_data_decode.h"
 
 #define bus 1
 #define address 0x40
@@ -21,9 +25,18 @@ void motor_stop();
 PCA9685 motor = PCA9685(bus, address);   //PCA9685 create
 
 int main(){
-    int motor_no, pulse;
+    int i, motor_no, pulse, fd;
+    char gyro_address[16] = "ttyUSB0";
+    struct receive_imusol_packet_t *data;
+
     motor.setPWMFreq(frequency);        //set frequency
+
+    fd = gyro_init(gyro_address);
     sleep(1);
+    for(i = 0; i < 50; i++){
+        data = get_gyro_data(fd, false);
+        printf("    eul(R P Y): %8.2f %8.2f %8.2f\r\n", data->eul[0], data->eul[1], data->eul[2]);
+    }
 
     while(pulse >= 0 && motor_no >= 0){
         cout << "==================================================" << endl;
