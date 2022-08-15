@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpca9685.a  CMakeFiles/pca9685.dir/I2C.cpp.o CMakeFiles/pca9685.dir/PCA9685.cpp.o
+/usr/bin/ranlib libpca9685.a

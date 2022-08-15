@@ -5,6 +5,7 @@ util/util1/CMakeFiles/mortor_control.dir/main.cpp.o
  ../deps/gyro/imu_data_decode.h
  ../deps/gyro/mygyro.h
  ../deps/gyro/packet.h
- ../lib/I2C.h
- ../lib/PCA9685.h
+ ../deps/pca9685/I2C.h
+ ../deps/pca9685/PCA9685.h
+ ../lib/BMP180.h
  /home/uav/code/controller/util/util1/main.cpp

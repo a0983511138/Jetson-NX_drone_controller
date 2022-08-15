@@ -79,6 +79,18 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,18 +123,6 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -157,73 +157,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-lib/CMakeFiles/i2c.dir/rule:
-	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/i2c.dir/rule
-.PHONY : lib/CMakeFiles/i2c.dir/rule
+lib/CMakeFiles/bmp180.dir/rule:
+	cd /home/uav/code/controller/build && $(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/bmp180.dir/rule
+.PHONY : lib/CMakeFiles/bmp180.dir/rule
 
 # Convenience name for target.
-i2c: lib/CMakeFiles/i2c.dir/rule
+bmp180: lib/CMakeFiles/bmp180.dir/rule
 
-.PHONY : i2c
+.PHONY : bmp180
 
 # fast build rule for target.
-i2c/fast:
-	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/i2c.dir/build.make lib/CMakeFiles/i2c.dir/build
-.PHONY : i2c/fast
+bmp180/fast:
+	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/bmp180.dir/build.make lib/CMakeFiles/bmp180.dir/build
+.PHONY : bmp180/fast
 
-I2C.o: I2C.cpp.o
+BMP180.o: BMP180.cpp.o
 
-.PHONY : I2C.o
-
-# target to build an object file
-I2C.cpp.o:
-	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/i2c.dir/build.make lib/CMakeFiles/i2c.dir/I2C.cpp.o
-.PHONY : I2C.cpp.o
-
-I2C.i: I2C.cpp.i
-
-.PHONY : I2C.i
-
-# target to preprocess a source file
-I2C.cpp.i:
-	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/i2c.dir/build.make lib/CMakeFiles/i2c.dir/I2C.cpp.i
-.PHONY : I2C.cpp.i
-
-I2C.s: I2C.cpp.s
-
-.PHONY : I2C.s
-
-# target to generate assembly for a file
-I2C.cpp.s:
-	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/i2c.dir/build.make lib/CMakeFiles/i2c.dir/I2C.cpp.s
-.PHONY : I2C.cpp.s
-
-PCA9685.o: PCA9685.cpp.o
-
-.PHONY : PCA9685.o
+.PHONY : BMP180.o
 
 # target to build an object file
-PCA9685.cpp.o:
-	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/i2c.dir/build.make lib/CMakeFiles/i2c.dir/PCA9685.cpp.o
-.PHONY : PCA9685.cpp.o
+BMP180.cpp.o:
+	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/bmp180.dir/build.make lib/CMakeFiles/bmp180.dir/BMP180.cpp.o
+.PHONY : BMP180.cpp.o
 
-PCA9685.i: PCA9685.cpp.i
+BMP180.i: BMP180.cpp.i
 
-.PHONY : PCA9685.i
+.PHONY : BMP180.i
 
 # target to preprocess a source file
-PCA9685.cpp.i:
-	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/i2c.dir/build.make lib/CMakeFiles/i2c.dir/PCA9685.cpp.i
-.PHONY : PCA9685.cpp.i
+BMP180.cpp.i:
+	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/bmp180.dir/build.make lib/CMakeFiles/bmp180.dir/BMP180.cpp.i
+.PHONY : BMP180.cpp.i
 
-PCA9685.s: PCA9685.cpp.s
+BMP180.s: BMP180.cpp.s
 
-.PHONY : PCA9685.s
+.PHONY : BMP180.s
 
 # target to generate assembly for a file
-PCA9685.cpp.s:
-	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/i2c.dir/build.make lib/CMakeFiles/i2c.dir/PCA9685.cpp.s
-.PHONY : PCA9685.cpp.s
+BMP180.cpp.s:
+	cd /home/uav/code/controller/build && $(MAKE) -f lib/CMakeFiles/bmp180.dir/build.make lib/CMakeFiles/bmp180.dir/BMP180.cpp.s
+.PHONY : BMP180.cpp.s
 
 # Help Target
 help:
@@ -233,17 +206,14 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... edit_cache"
-	@echo "... i2c"
+	@echo "... install"
 	@echo "... rebuild_cache"
+	@echo "... bmp180"
 	@echo "... list_install_components"
 	@echo "... install/local"
-	@echo "... install"
-	@echo "... I2C.o"
-	@echo "... I2C.i"
-	@echo "... I2C.s"
-	@echo "... PCA9685.o"
-	@echo "... PCA9685.i"
-	@echo "... PCA9685.s"
+	@echo "... BMP180.o"
+	@echo "... BMP180.i"
+	@echo "... BMP180.s"
 .PHONY : help
 
 

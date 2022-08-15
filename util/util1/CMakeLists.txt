@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 # Set variables
 set(PROJECT_NAME mortor_control)
 set(PROJECT_LANGUAGE CXX C)
-set(PROJECT_DEPS JetsonGPIO pthread libgyro i2c )
+set(PROJECT_DEPS pca9685 pthread libgyro bmp180)
 
 # Compile setting
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")

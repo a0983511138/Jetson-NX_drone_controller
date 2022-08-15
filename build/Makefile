@@ -170,17 +170,30 @@ libgyro/fast:
 .PHONY : libgyro/fast
 
 #=============================================================================
-# Target rules for targets named i2c
+# Target rules for targets named pca9685
 
 # Build rule for target.
-i2c: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 i2c
-.PHONY : i2c
+pca9685: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pca9685
+.PHONY : pca9685
 
 # fast build rule for target.
-i2c/fast:
-	$(MAKE) -f lib/CMakeFiles/i2c.dir/build.make lib/CMakeFiles/i2c.dir/build
-.PHONY : i2c/fast
+pca9685/fast:
+	$(MAKE) -f deps/pca9685/CMakeFiles/pca9685.dir/build.make deps/pca9685/CMakeFiles/pca9685.dir/build
+.PHONY : pca9685/fast
+
+#=============================================================================
+# Target rules for targets named bmp180
+
+# Build rule for target.
+bmp180: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bmp180
+.PHONY : bmp180
+
+# fast build rule for target.
+bmp180/fast:
+	$(MAKE) -f lib/CMakeFiles/bmp180.dir/build.make lib/CMakeFiles/bmp180.dir/build
+.PHONY : bmp180/fast
 
 #=============================================================================
 # Target rules for targets named mortor_control
@@ -208,7 +221,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... libgyro"
-	@echo "... i2c"
+	@echo "... pca9685"
+	@echo "... bmp180"
 	@echo "... mortor_control"
 .PHONY : help
 

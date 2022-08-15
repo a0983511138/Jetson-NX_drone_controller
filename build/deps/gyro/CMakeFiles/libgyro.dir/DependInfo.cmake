@@ -13,7 +13,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../deps/gyro"
-  "/usr/local/include/JetsonGPIO"
+  "../deps/pca9685"
   )
 
 # Targets to which this target links.

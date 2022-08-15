@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/uav/code/controller/lib/I2C.cpp
+/home/uav/code/controller/deps/pca9685/I2C.cpp
 sys/ioctl.h
 -
 errno.h
@@ -24,13 +24,13 @@ linux/i2c-dev.h
 syslog.h
 -
 I2C.h
-/home/uav/code/controller/lib/I2C.h
+/home/uav/code/controller/deps/pca9685/I2C.h
 
-/home/uav/code/controller/lib/I2C.h
+/home/uav/code/controller/deps/pca9685/I2C.h
 inttypes.h
 -
 
-/home/uav/code/controller/lib/PCA9685.cpp
+/home/uav/code/controller/deps/pca9685/PCA9685.cpp
 sys/stat.h
 -
 sys/ioctl.h
@@ -38,7 +38,7 @@ sys/ioctl.h
 unistd.h
 -
 I2C.h
-/home/uav/code/controller/lib/I2C.h
+/home/uav/code/controller/deps/pca9685/I2C.h
 linux/i2c-dev.h
 -
 stdio.h
@@ -54,11 +54,11 @@ errno.h
 math.h
 -
 PCA9685.h
-/home/uav/code/controller/lib/PCA9685.h
+/home/uav/code/controller/deps/pca9685/PCA9685.h
 
-/home/uav/code/controller/lib/PCA9685.h
+/home/uav/code/controller/deps/pca9685/PCA9685.h
 inttypes.h
 -
 I2C.h
-/home/uav/code/controller/lib/I2C.h
+/home/uav/code/controller/deps/pca9685/I2C.h
 

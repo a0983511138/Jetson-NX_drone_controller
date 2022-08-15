@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libi2c.a"
+  "libpca9685.a"
 )

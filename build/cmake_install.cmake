@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/uav/code/controller/build/deps/gyro/cmake_install.cmake")
+  include("/home/uav/code/controller/build/deps/pca9685/cmake_install.cmake")
   include("/home/uav/code/controller/build/lib/cmake_install.cmake")
   include("/home/uav/code/controller/build/util/util1/cmake_install.cmake")
 

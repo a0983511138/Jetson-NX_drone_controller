@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbmp180.a  CMakeFiles/bmp180.dir/BMP180.cpp.o
+/usr/bin/ranlib libbmp180.a

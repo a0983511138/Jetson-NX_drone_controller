@@ -84,7 +84,7 @@ void timer(int sig)
 	}
 }
 
-int gyro_init(char gyro_addr[16]){
+int gyro_init(const char gyro_addr[16]){
 	int fd = 0;
 	char dir_usb_dev[64] = "/dev/";
     
@@ -113,6 +113,7 @@ struct receive_imusol_packet_t *get_gyro_data(int fd, bool printMode)
         //puts("\033c");
         //  frame_count++;
         if(printMode){
+            //puts("\033c");
             if(receive_gwsol.tag != KItemGWSOL)
             {
                 //   printf imu data packet 
@@ -130,11 +131,10 @@ struct receive_imusol_packet_t *get_gyro_data(int fd, bool printMode)
                     puts("");
                 }
 
-                puts("Please enter ctrl + 'c' to quit...");
+                //puts("Please enter ctrl + 'c' to quit...");
             }
         }
     }
-
     return &receive_imusol;
 }	
 

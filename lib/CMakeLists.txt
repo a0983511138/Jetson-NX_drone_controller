@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 # Set variables
-set(PROJECT_NAME i2c)
+set(PROJECT_NAME bmp180)
 set(PROJECT_LANGUAGE C CXX)
 set(PROJECT_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
 set(PROJECT_DEPS gcc stdc++)

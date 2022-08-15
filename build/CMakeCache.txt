@@ -196,20 +196,14 @@ CMake_Template_BINARY_DIR:STATIC=/home/uav/code/controller/build
 //Value Computed by CMake
 CMake_Template_SOURCE_DIR:STATIC=/home/uav/code/controller
 
-//Path to a file.
-JETSONGPIO_INCLUDE_DIRS:PATH=/usr/local/include/JetsonGPIO
-
-//Path to a library.
-JETSONGPIO_LIBRARIES:FILEPATH=/usr/local/lib/libJetsonGPIO.so
-
 //Value Computed by CMake
-i2c_BINARY_DIR:STATIC=/home/uav/code/controller/build/lib
+bmp180_BINARY_DIR:STATIC=/home/uav/code/controller/build/lib
 
 //Dependencies for target
-i2c_LIB_DEPENDS:STATIC=
+bmp180_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
-i2c_SOURCE_DIR:STATIC=/home/uav/code/controller/lib
+bmp180_SOURCE_DIR:STATIC=/home/uav/code/controller/lib
 
 //Value Computed by CMake
 libgyro_BINARY_DIR:STATIC=/home/uav/code/controller/build/deps/gyro
@@ -225,6 +219,15 @@ mortor_control_BINARY_DIR:STATIC=/home/uav/code/controller/build/util/util1
 
 //Value Computed by CMake
 mortor_control_SOURCE_DIR:STATIC=/home/uav/code/controller/util/util1
+
+//Value Computed by CMake
+pca9685_BINARY_DIR:STATIC=/home/uav/code/controller/build/deps/pca9685
+
+//Dependencies for target
+pca9685_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+pca9685_SOURCE_DIR:STATIC=/home/uav/code/controller/deps/pca9685
 
 
 ########################
@@ -329,7 +332,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -370,6 +373,4 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding JetsonGPIO
-FIND_PACKAGE_MESSAGE_DETAILS_JetsonGPIO:INTERNAL=[/usr/local/include/JetsonGPIO][/usr/local/lib/libJetsonGPIO.so][v()]
 

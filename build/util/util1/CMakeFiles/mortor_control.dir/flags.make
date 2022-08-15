@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/uav/code/controller/deps/gyro -I/usr/local/include/JetsonGPIO -I/home/uav/code/controller/lib -I/home/uav/code/controller/util/util1 
+CXX_INCLUDES = -I/home/uav/code/controller/deps/gyro -I/home/uav/code/controller/deps/pca9685 -I/home/uav/code/controller/lib -I/home/uav/code/controller/util/util1 
 

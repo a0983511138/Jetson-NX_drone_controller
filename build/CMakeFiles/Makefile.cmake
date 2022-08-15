@@ -11,11 +11,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
-  "../cmake/FindJetsonGPIO.cmake"
   "../cmake/deps.cmake"
   "../cmake/lib.cmake"
   "../cmake/util.cmake"
   "../deps/gyro/CMakeLists.txt"
+  "../deps/pca9685/CMakeLists.txt"
   "../lib/CMakeLists.txt"
   "../util/util1/CMakeLists.txt"
   "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
@@ -29,8 +29,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.10/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.10/Modules/Compiler/GNU.cmake"
-  "/usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake"
-  "/usr/share/cmake-3.10/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake"
@@ -48,6 +46,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "deps/gyro/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "deps/pca9685/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "util/util1/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -55,6 +54,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "deps/gyro/CMakeFiles/libgyro.dir/DependInfo.cmake"
-  "lib/CMakeFiles/i2c.dir/DependInfo.cmake"
+  "deps/pca9685/CMakeFiles/pca9685.dir/DependInfo.cmake"
+  "lib/CMakeFiles/bmp180.dir/DependInfo.cmake"
   "util/util1/CMakeFiles/mortor_control.dir/DependInfo.cmake"
   )

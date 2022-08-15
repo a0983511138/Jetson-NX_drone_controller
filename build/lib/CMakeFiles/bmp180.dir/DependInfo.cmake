@@ -4,15 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/uav/code/controller/lib/I2C.cpp" "/home/uav/code/controller/build/lib/CMakeFiles/i2c.dir/I2C.cpp.o"
-  "/home/uav/code/controller/lib/PCA9685.cpp" "/home/uav/code/controller/build/lib/CMakeFiles/i2c.dir/PCA9685.cpp.o"
+  "/home/uav/code/controller/lib/BMP180.cpp" "/home/uav/code/controller/build/lib/CMakeFiles/bmp180.dir/BMP180.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../deps/gyro"
-  "/usr/local/include/JetsonGPIO"
+  "../deps/pca9685"
   "../lib"
   )
 

@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../deps/pca9685/I2C.h
+inttypes.h
+-
+
+/home/uav/code/controller/lib/BMP180.cpp
+BMP180.h
+/home/uav/code/controller/lib/BMP180.h
+
+/home/uav/code/controller/lib/BMP180.h
+I2C.h
+/home/uav/code/controller/lib/I2C.h
+linux/i2c-dev.h
+-
+stdio.h
+-
+unistd.h
+-
+math.h
+-
+syslog.h
+-
+errno.h
+-
+
