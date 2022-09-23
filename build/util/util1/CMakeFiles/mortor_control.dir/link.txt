@@ -1,1 +1,1 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/mortor_control.dir/main.cpp.o  -o mortor_control ../../deps/pca9685/libpca9685.a -lpthread ../../deps/gyro/liblibgyro.a ../../lib/libbmp180.a 
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/mortor_control.dir/main.cpp.o  -o mortor_control ../../deps/pca9685/libpca9685.a -lpthread ../../deps/gyro/liblibgyro.a 

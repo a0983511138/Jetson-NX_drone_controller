@@ -84,7 +84,7 @@ deps/gyro/preinstall:
 deps/gyro/CMakeFiles/libgyro.dir/all:
 	$(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/depend
 	$(MAKE) -f deps/gyro/CMakeFiles/libgyro.dir/build.make deps/gyro/CMakeFiles/libgyro.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=3,4,5,6 "Built target libgyro"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=1,2,3,4 "Built target libgyro"
 .PHONY : deps/gyro/CMakeFiles/libgyro.dir/all
 
 # Include target in all.
@@ -139,7 +139,7 @@ deps/pca9685/preinstall:
 deps/pca9685/CMakeFiles/pca9685.dir/all:
 	$(MAKE) -f deps/pca9685/CMakeFiles/pca9685.dir/build.make deps/pca9685/CMakeFiles/pca9685.dir/depend
 	$(MAKE) -f deps/pca9685/CMakeFiles/pca9685.dir/build.make deps/pca9685/CMakeFiles/pca9685.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=9,10,11 "Built target pca9685"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=7,8,9 "Built target pca9685"
 .PHONY : deps/pca9685/CMakeFiles/pca9685.dir/all
 
 # Include target in all.
@@ -170,61 +170,6 @@ clean: deps/pca9685/CMakeFiles/pca9685.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory lib
-
-# Convenience name for "all" pass in the directory.
-lib/all: lib/CMakeFiles/bmp180.dir/all
-
-.PHONY : lib/all
-
-# Convenience name for "clean" pass in the directory.
-lib/clean: lib/CMakeFiles/bmp180.dir/clean
-
-.PHONY : lib/clean
-
-# Convenience name for "preinstall" pass in the directory.
-lib/preinstall:
-
-.PHONY : lib/preinstall
-
-#=============================================================================
-# Target rules for target lib/CMakeFiles/bmp180.dir
-
-# All Build rule for target.
-lib/CMakeFiles/bmp180.dir/all:
-	$(MAKE) -f lib/CMakeFiles/bmp180.dir/build.make lib/CMakeFiles/bmp180.dir/depend
-	$(MAKE) -f lib/CMakeFiles/bmp180.dir/build.make lib/CMakeFiles/bmp180.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=1,2 "Built target bmp180"
-.PHONY : lib/CMakeFiles/bmp180.dir/all
-
-# Include target in all.
-all: lib/CMakeFiles/bmp180.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-lib/CMakeFiles/bmp180.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/bmp180.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 0
-.PHONY : lib/CMakeFiles/bmp180.dir/rule
-
-# Convenience name for target.
-bmp180: lib/CMakeFiles/bmp180.dir/rule
-
-.PHONY : bmp180
-
-# clean rule for target.
-lib/CMakeFiles/bmp180.dir/clean:
-	$(MAKE) -f lib/CMakeFiles/bmp180.dir/build.make lib/CMakeFiles/bmp180.dir/clean
-.PHONY : lib/CMakeFiles/bmp180.dir/clean
-
-# clean rule for target.
-clean: lib/CMakeFiles/bmp180.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Directory level rules for directory util/util1
 
 # Convenience name for "all" pass in the directory.
@@ -246,12 +191,11 @@ util/util1/preinstall:
 # Target rules for target util/util1/CMakeFiles/mortor_control.dir
 
 # All Build rule for target.
-util/util1/CMakeFiles/mortor_control.dir/all: lib/CMakeFiles/bmp180.dir/all
 util/util1/CMakeFiles/mortor_control.dir/all: deps/gyro/CMakeFiles/libgyro.dir/all
 util/util1/CMakeFiles/mortor_control.dir/all: deps/pca9685/CMakeFiles/pca9685.dir/all
 	$(MAKE) -f util/util1/CMakeFiles/mortor_control.dir/build.make util/util1/CMakeFiles/mortor_control.dir/depend
 	$(MAKE) -f util/util1/CMakeFiles/mortor_control.dir/build.make util/util1/CMakeFiles/mortor_control.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=7,8 "Built target mortor_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=5,6 "Built target mortor_control"
 .PHONY : util/util1/CMakeFiles/mortor_control.dir/all
 
 # Include target in all.
@@ -261,7 +205,7 @@ all: util/util1/CMakeFiles/mortor_control.dir/all
 
 # Build rule for subdir invocation for target.
 util/util1/CMakeFiles/mortor_control.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 util/util1/CMakeFiles/mortor_control.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/uav/code/controller/build/CMakeFiles 0
 .PHONY : util/util1/CMakeFiles/mortor_control.dir/rule

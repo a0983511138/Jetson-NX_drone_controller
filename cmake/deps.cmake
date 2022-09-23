@@ -15,10 +15,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 # find_package(JetsonGPIO)
 # include_directories(${JETSONGPIO_INCLUDE_DIRS})
 
-##find_package(I2C REQUIRED)
-#find_package(I2C)
-#include_directories(${I2C_INCLUDE_DIRS})
-
 # Add subdirectory
 foreach(DEPS_PATH ${DEPS_PATHS})
     add_subdirectory(${DEPS_PATH})

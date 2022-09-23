@@ -4,10 +4,12 @@
 deps/gyro/CMakeFiles/libgyro.dir/imu_data_decode.cpp.o
  /home/uav/code/controller/deps/gyro/imu_data_decode.cpp
  /home/uav/code/controller/deps/gyro/imu_data_decode.h
+ /home/uav/code/controller/deps/gyro/mygyro.h
  /home/uav/code/controller/deps/gyro/packet.h
 deps/gyro/CMakeFiles/libgyro.dir/mygyro.cpp.o
  /home/uav/code/controller/deps/gyro/imu_data_decode.h
  /home/uav/code/controller/deps/gyro/mygyro.cpp
+ /home/uav/code/controller/deps/gyro/mygyro.h
  /home/uav/code/controller/deps/gyro/packet.h
 deps/gyro/CMakeFiles/libgyro.dir/packet.cpp.o
  /home/uav/code/controller/deps/gyro/packet.cpp

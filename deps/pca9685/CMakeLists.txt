@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 2.8)
 set(PROJECT_NAME pca9685)
 set(PROJECT_LANGUAGE CXX)
 set(PROJECT_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+set(PROJECT_DEPS gcc)
 
 # Compile setting
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")

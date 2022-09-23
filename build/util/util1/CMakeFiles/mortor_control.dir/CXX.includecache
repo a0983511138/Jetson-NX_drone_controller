@@ -30,22 +30,6 @@ inttypes.h
 I2C.h
 ../deps/pca9685/I2C.h
 
-../lib/BMP180.h
-I2C.h
-../lib/I2C.h
-linux/i2c-dev.h
--
-stdio.h
--
-unistd.h
--
-math.h
--
-syslog.h
--
-errno.h
--
-
 /home/uav/code/controller/util/util1/main.cpp
 iostream
 -
@@ -59,8 +43,6 @@ stdlib.h
 -
 PCA9685.h
 /home/uav/code/controller/util/util1/PCA9685.h
-BMP180.h
-/home/uav/code/controller/util/util1/BMP180.h
 mygyro.h
 /home/uav/code/controller/util/util1/mygyro.h
 packet.h

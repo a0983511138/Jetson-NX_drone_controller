@@ -6,6 +6,5 @@ util/util1/CMakeFiles/mortor_control.dir/main.cpp.o: ../deps/gyro/mygyro.h
 util/util1/CMakeFiles/mortor_control.dir/main.cpp.o: ../deps/gyro/packet.h
 util/util1/CMakeFiles/mortor_control.dir/main.cpp.o: ../deps/pca9685/I2C.h
 util/util1/CMakeFiles/mortor_control.dir/main.cpp.o: ../deps/pca9685/PCA9685.h
-util/util1/CMakeFiles/mortor_control.dir/main.cpp.o: ../lib/BMP180.h
 util/util1/CMakeFiles/mortor_control.dir/main.cpp.o: ../util/util1/main.cpp
 

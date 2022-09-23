@@ -55,8 +55,7 @@ void PCA9685::reset() {
 		i2c->write_byte(MODE1, 0x00); //Normal mode
 		i2c->write_byte(MODE2, 0x04); //totem pole
 
-}
-//! Set the frequency of PWM
+
 /*!
  \param freq desired frequency. 40Hz to 1000Hz using internal 25MHz oscillator.
  */

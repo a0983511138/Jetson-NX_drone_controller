@@ -52,6 +52,6 @@ project(${PROJECT_NAME} ${PROJECT_LANGUAGE})
 
 # Include cmake files
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/deps.cmake)
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/lib.cmake)
+# include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/lib.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/util.cmake)
 

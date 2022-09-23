@@ -3,6 +3,7 @@
 
 #include "packet.h"
 #include "imu_data_decode.h"
+#include "mygyro.h"
 
 static packet_t RxPkt; /* used for data receive */
 /*

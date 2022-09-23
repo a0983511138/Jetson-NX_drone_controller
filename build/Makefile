@@ -183,19 +183,6 @@ pca9685/fast:
 .PHONY : pca9685/fast
 
 #=============================================================================
-# Target rules for targets named bmp180
-
-# Build rule for target.
-bmp180: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bmp180
-.PHONY : bmp180
-
-# fast build rule for target.
-bmp180/fast:
-	$(MAKE) -f lib/CMakeFiles/bmp180.dir/build.make lib/CMakeFiles/bmp180.dir/build
-.PHONY : bmp180/fast
-
-#=============================================================================
 # Target rules for targets named mortor_control
 
 # Build rule for target.
@@ -222,7 +209,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... libgyro"
 	@echo "... pca9685"
-	@echo "... bmp180"
 	@echo "... mortor_control"
 .PHONY : help
 

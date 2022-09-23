@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8)
 set(PROJECT_NAME bmp180)
 set(PROJECT_LANGUAGE C CXX)
 set(PROJECT_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
-set(PROJECT_DEPS gcc stdc++)
+set(PROJECT_DEPS gcc stdc++ i2c)
 
 # Compile setting
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")

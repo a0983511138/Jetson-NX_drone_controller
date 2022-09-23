@@ -92,7 +92,6 @@ util/util1/mortor_control: util/util1/CMakeFiles/mortor_control.dir/main.cpp.o
 util/util1/mortor_control: util/util1/CMakeFiles/mortor_control.dir/build.make
 util/util1/mortor_control: deps/pca9685/libpca9685.a
 util/util1/mortor_control: deps/gyro/liblibgyro.a
-util/util1/mortor_control: lib/libbmp180.a
 util/util1/mortor_control: util/util1/CMakeFiles/mortor_control.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uav/code/controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mortor_control"
 	cd /home/uav/code/controller/build/util/util1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mortor_control.dir/link.txt --verbose=$(VERBOSE)

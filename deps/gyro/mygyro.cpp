@@ -12,6 +12,7 @@
 
 #include "packet.h"
 #include "imu_data_decode.h"
+#include "mygyro.h"
 
 /*
  * @brief Open serial port with the given device name
@@ -22,6 +23,7 @@
 /* recv freq */
 
 static int frame_rate;
+imudata_packet_t imusol;
 
 static uint8_t buf[2048];
 void dump_data_packet(receive_imusol_packet_t *data);
@@ -38,7 +40,7 @@ int open_port(char *port_device)
 	{
 		perror("open_port: Unable to open SerialPort");
 		puts("Please check the usb port name!!!");
-		puts("such as \" sudo ./main ttyUSB0 \"");
+		puts("such as \" sudo ./main \"");
 		exit(0);
 	}
 
@@ -57,7 +59,7 @@ int open_port(char *port_device)
 	}
 	else 
 	{
-		printf("isatty success!\n");
+		printf("\nisatty success!\n");
 	}
 
 
@@ -97,7 +99,7 @@ int gyro_init(const char gyro_addr[16]){
     return fd;
 }
 
-struct receive_imusol_packet_t *get_gyro_data(int fd, bool printMode)
+imudata_packet_t *get_gyro_data(int fd, bool printMode)
 {
     int i;
     ssize_t n = 0;
@@ -110,10 +112,14 @@ struct receive_imusol_packet_t *get_gyro_data(int fd, bool printMode)
         {
             packet_decode(buf[i]);
         }
+
+        memcpy(imusol.eul, receive_imusol.eul, sizeof(float) * 3);
+        memcpy(imusol.quat, receive_imusol.quat, sizeof(float) * 4);
+
         //puts("\033c");
         //  frame_count++;
         if(printMode){
-            //puts("\033c");
+            puts("\033c");
             if(receive_gwsol.tag != KItemGWSOL)
             {
                 //   printf imu data packet 
@@ -135,7 +141,8 @@ struct receive_imusol_packet_t *get_gyro_data(int fd, bool printMode)
             }
         }
     }
-    return &receive_imusol;
+    //return &receive_imusol;
+    return &imusol;
 }	
 
 void dump_data_packet(receive_imusol_packet_t *data)

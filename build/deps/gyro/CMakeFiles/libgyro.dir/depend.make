@@ -3,10 +3,12 @@
 
 deps/gyro/CMakeFiles/libgyro.dir/imu_data_decode.cpp.o: ../deps/gyro/imu_data_decode.cpp
 deps/gyro/CMakeFiles/libgyro.dir/imu_data_decode.cpp.o: ../deps/gyro/imu_data_decode.h
+deps/gyro/CMakeFiles/libgyro.dir/imu_data_decode.cpp.o: ../deps/gyro/mygyro.h
 deps/gyro/CMakeFiles/libgyro.dir/imu_data_decode.cpp.o: ../deps/gyro/packet.h
 
 deps/gyro/CMakeFiles/libgyro.dir/mygyro.cpp.o: ../deps/gyro/imu_data_decode.h
 deps/gyro/CMakeFiles/libgyro.dir/mygyro.cpp.o: ../deps/gyro/mygyro.cpp
+deps/gyro/CMakeFiles/libgyro.dir/mygyro.cpp.o: ../deps/gyro/mygyro.h
 deps/gyro/CMakeFiles/libgyro.dir/mygyro.cpp.o: ../deps/gyro/packet.h
 
 deps/gyro/CMakeFiles/libgyro.dir/packet.cpp.o: ../deps/gyro/packet.cpp

@@ -197,15 +197,6 @@ CMake_Template_BINARY_DIR:STATIC=/home/uav/code/controller/build
 CMake_Template_SOURCE_DIR:STATIC=/home/uav/code/controller
 
 //Value Computed by CMake
-bmp180_BINARY_DIR:STATIC=/home/uav/code/controller/build/lib
-
-//Dependencies for target
-bmp180_LIB_DEPENDS:STATIC=
-
-//Value Computed by CMake
-bmp180_SOURCE_DIR:STATIC=/home/uav/code/controller/lib
-
-//Value Computed by CMake
 libgyro_BINARY_DIR:STATIC=/home/uav/code/controller/build/deps/gyro
 
 //Dependencies for target
@@ -236,8 +227,6 @@ pca9685_SOURCE_DIR:STATIC=/home/uav/code/controller/deps/pca9685
 
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
-//STRINGS property for variable: CMAKE_BUILD_TYPE
-CMAKE_BUILD_TYPE-STRINGS:INTERNAL=Debug;Release
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/home/uav/code/controller/build
 //Major version of cmake used to create the current loaded cache
@@ -332,7 +321,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

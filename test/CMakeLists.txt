@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 # Set variables
 set(PROJECT_NAME cmake_test)
 set(PROJECT_LANGUAGE C CXX)
-set(PROJECT_DEPS libgyro pca9685)
+set(PROJECT_DEPS libgyro pca9685 bmp180)
 
 # Compile setting
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
